@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<style type="text/css" media="all">
+
+   @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+    body{
+        background: #DCDCDC;
+    }
+    div{
+        text-align: left;
+        padding: 20px;
+        border-radius:20px;
+        background: linear-gradient(to bottom,#FFB405,#FFBE28,#FFE363);
+        margin-bottom: 20px;
+        box-shadow: 5px 5px 10px #FFFFFF,-5px -5px 10px #555555;
+        font-family: Itim;
+        color: #FFFFFF;
+    }
+</style>
+<body>
+.<img src="" id="sign" alt="">
+<section id="text">
+    
+</section>
+</body>
+
+</html>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+  import { getFirestore,getDocs, collection } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
+
+
+  const firebaseConfig = {
+      apiKey: "AIzaSyClL7pE-1kTSr2ouTpFHnwdvhW36rLgX2s",
+      authDomain: "jnvcob.firebaseapp.com",
+      databaseURL: "https://jnvcob.firebaseio.com",
+      projectId: "jnvcob",
+      storageBucket: "jnvcob.appspot.com",
+      messagingSenderId: "69566502508",
+      appId: "1:69566502508:web:be3e4ad98d78924cb7aa49",
+      measurementId: "G-BH23ZFD2KB"
+  };
+  
+  
+  
+  
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+var sign = document.getElementById("text")
+
+
+
+
+  const querySnapshot = await getDocs(collection(db, "user"));
+  querySnapshot.forEach((doc) => {
+      console.log(`${doc.id} => ${doc.data().name}`);
+    var div = document.createElement("div");
+    div.innerHTML=`<h2>${doc.data().name}</h2><p>${doc.data().gander}</p> <p>${doc.data().comment}</p><img src="${doc.data().sign}" width="100" alt="" />`;
+  sign.appendChild(div);
+  });
+</script>

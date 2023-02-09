@@ -17,7 +17,7 @@ var pageb = document.getElementById("a");
 var pagec = document.getElementById("b");
 var paged = document.getElementById("c");
 var clr = document.getElementById("clr");
-var sv = document.getElementById("savey");
+
 let mycanvas='';
 function setup() {
     myCanvas = createCanvas(displayWidth-20, 250);
@@ -48,19 +48,33 @@ btna.addEventListener("click",()=>{
     pageb.style.display="flex";
 })
 
-
-sv.addEventListener("click",()=>{
-    saveCanvas(mycanvas, 'jpg', 'jpg');
-})
-
-
 btnb.addEventListener("click",()=>{
-    pageb.style.display='none';
-    pagec.style.display='flex';
+   if (document.getElementById("name").value && document.querySelector('input[name="radioNoLabel"]:checked')) {
+        pageb.style.display='none';
+        pagec.style.display='flex';
+
+
+   }
+   else{
+       Swal.fire(
+           "",
+           "please enter your name select your gender",
+           "error"
+           )
+   }
 })
 btnc.addEventListener("click",()=>{
+   if (document.getElementById("comment").value) {
     pagec.style.display="none";
     paged.style.display="flex";
+
+   }else {
+       Swal.fire(
+           "",
+           "please share your word",
+           "error"
+       )
+   }
 clr.addEventListener("click",()=>{
     clear();
     function draw() {
@@ -76,7 +90,5 @@ clr.addEventListener("click",()=>{
 
 
 })
-
-
 
 

@@ -38,7 +38,7 @@ var photos;
   //const analytics = getAnalytics(app);
 
 var submit = document.getElementById("submit");
-var imag = document.getElementById('imagt');
+//importag = document.getElementById('imagt');
 
 
 
@@ -50,9 +50,9 @@ submit.addEventListener("click",()=>{
     var comments = document.getElementById("comment").value;
     var signs=document.querySelector("canvas").toDataURL();
     var ganu =document.querySelector('input[name="radioNoLabel"]:checked').value;
-    var file = imag.files[0];
+    //var file = imag.files[0];
     
-    if (file) {
+    /*if (file) {
       const reader = new FileReader();
        reader.readAsDataURL(file);
         reader.addEventListener('load', () => {
@@ -61,16 +61,20 @@ submit.addEventListener("click",()=>{
         });
     }else{
         photos="no photo";
-    }
+    }*/
 try {
   const docRef =  addDoc(collection(db, "user"), {
     name: names,
     gander: ganu,
     comment: comments,
-    sign:signs,
-    pic:photos
+    sign:signs
   });
   console.log("Document written with ID: ", docRef.id);
+  Swal.fire(
+      'Thanks!',
+      'Your words are now saved in my Diary!',
+      'success'
+  );
 } catch (e) {
   console.error("Error adding document: ", e);
 }

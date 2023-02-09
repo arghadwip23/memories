@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#FFE003">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css
 ">
@@ -12,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 
 
-    <title>HTML</title>
+    <title>Argha</title>
 
     <!-- HTML -->
 
@@ -26,11 +27,11 @@
         <lottie-player src="preloader_basketball.json" background="transparent" speed="1" style="width: 150px; height: 150px;" loop autoplay></lottie-player>
         loading..
     </section>
-    <section id="intro">
-        <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_v1yudlrx.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
-        <p class='element mx-4 text-center'> Hi there, <br>there is few day left after that We are going to leave the vidyalaya</p>
+    <section id="intro" class="pb-4">
+        <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_oibkdzf3.json" background="transparent" speed="1" style="width: 300px; height: 250px;" loop autoplay></lottie-player>
+        <p class='element px-4 text-left'> Hey Buddy! look where we are , at the end point of the most memorable journey of the life. After this you will be at different path with ton of different friends & in this list of friends Hardly I would place my one ,As it is normal to forgot the useless things. Before you do that , please share few words about me. </p>
 
-        <button class="btn btn-outline-success ind" id="bta">Let's get started</button>
+        <button class="btn ind m-4" id="bta">Let's go</button>
 
 
 
@@ -39,11 +40,11 @@
         <div class="container m-2 p-2 box">
             <h1 class="text-center">First let me know who are you</h1>
             <div class="mt-3">
-                <label for="exampleFormControlInput1" class="form-label">Tell me your name buddy</label>
+                <label for="exampleFormControlInput1" class="form-label">Tell me your name buddy :</label>
                 <input type="text" class="form-control" id="name" placeholder="put your name here">
             </div>
             <div class="mt-4">
-                You are a <br>
+                You are a : <br>
                 <label> <input class="gander" type="radio" name="radioNoLabel" id="gander" value="male" aria-label="...">
                     <img src="avm.svg" alt="" />
                 </label>
@@ -52,51 +53,30 @@
                 </label>
             </div>
         </div>
-        <button class="btn btn-outline-success ind" id="btb"> next</button>
+        <button class="btn ind" id="btb"> next</button>
 
     </section>
     <section class="px-3" id="b">
         <div class="container">
-            <h1>What do you think about me</h1>
+            <h1>Please share your words</h1>
             <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                <label for="exampleFormControlTextarea1" class="form-label">please start here</label>
                 <textarea class="form-control" id="comment" rows="10"></textarea>
             </div>
-            <!--  <div class="mt-4">
-                Which one suites me :
-                <br />
-                <label> <input class="" type="radio" name="radio" id="radioNoLabel1" value="" aria-label="...">
-                    <img src="a.svg" alt="" />
-                </label>
-                <label> <input class="" type="radio" name="radio" id="radioNoLabel1" value="" aria-label="...">
-                    <img src="b.svg" alt="" />
-                </label>
-                <label> <input class="" type="radio" name="radio" id="radioNoLabel1" value="" aria-label="...">
-                    <img src="c.svg" alt="" />
-                </label>
-                <label> <input class="" type="radio" name="radio" id="radioNoLabel1" value="" aria-label="...">
-                    <img src="d.svg" alt="" />
-                </label>
-            </div> -->
+
         </div>
-        <button class="btn btn-outline-success ind" id="btc"> next</button>
+        <button class="btn ind" id="btc"> next</button>
 
     </section>
     <section id="c">
         <div class="container-fluid" id="can">
         <p>Put your signature,Buddy</p>
         </div>
-        <div class="container-fluid">
-            <button class="btn btn-danger" id="clr"> clear</button>
+        <div class="container-fluid mb-4">
+            <button class="btn" id="clr"> clear</button>
+        </div>
 
-            <button class="btn btn-success" id="savey">save</button>
-        </div>
-        <div class="p-4">
-            <label for="formFile" class="form-label">Default file input example</label>
-            <input class="form-control" type="file" accept="image/*" id="imagt">
-        </div>
-        
-        <button class="btn btn-success" id="submit">All finished</button>
+        <button class="btn mt-4" id="submit">All finished</button>
     </section>
     <!-- Project -->
     <script src="main.js"></script>
@@ -104,6 +84,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
