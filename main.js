@@ -24,7 +24,7 @@ function setup() {
     //mycanvas.id("canva");
     myCanvas.parent('can');
     //mycanvas.id('canva');
-      background(255);
+   //   background(255);
 
 }
 

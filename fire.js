@@ -3,7 +3,7 @@ import { getFirestore,addDoc, collection } from "https://www.gstatic.com/firebas
 
 console.log("hi");
 var photos;
-
+var c = document.getElementById("c");
 
 
 
@@ -38,6 +38,7 @@ var photos;
   //const analytics = getAnalytics(app);
 
 var submit = document.getElementById("submit");
+var thank = document.getElementById("thank");
 //importag = document.getElementById('imagt');
 
 
@@ -82,6 +83,9 @@ try {
       'Your words are now saved in my Diary!',
       'success'
   );
+  c.style.display="none";
+  thank.style.display="flex";
+  
 } catch (e) {
   console.error("Error adding document: ", e);
 }
